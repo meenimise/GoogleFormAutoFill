@@ -23,17 +23,12 @@ setTimeout(() => {
     });
 
     setTimeout(() => {
-        // Move to the next page
-        const spanElements = document.querySelectorAll('span');
-        spanElements.forEach((spanElement) => {
-            if (spanElement.textContent === 'Next') {
-                const divElement = spanElement.parentElement;
+        // Move to the next page or submit the form
+        const divElements = document.querySelectorAll('div');
+        divElements.forEach((divElement) => {
+            if (divElement.getAttribute('jsname') === "OCpkoe" || divElement.getAttribute('jsname') === "M2UYVd") {
                 divElement.click();
             }
-            else if (spanElement.textContent === 'Submit') {
-                const divElement = spanElement.parentElement;
-                divElement.click();
-            }
-        });		
+        });        
     }, 2000);
 }, 2000);
