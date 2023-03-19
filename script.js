@@ -10,7 +10,7 @@ setTimeout(() => {
     // Check if the current page is the completion page, then submit a new form
     const aElements = document.querySelectorAll('a');
     aElements.forEach((aElement) => {
-        if (aElement.textContent === 'Submit another response') {
+        if (aElement.getAttribute('href').includes('viewform?usp=form_confirm')) {
             aElement.click();
         }
     });
