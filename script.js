@@ -1,15 +1,15 @@
 // Check final page to reload the form
 function reloadForm() {
-    let isSubmissionPage = false;
+    let count = 0;
     const buttonElements = document.querySelectorAll('div');
     buttonElements.forEach((buttonElement) => {
-        if (buttonElement.getAttribute('jsname') === "M2UYVd") {
-            isSubmissionPage = true;
-        }
+        if (buttonElement.getAttribute('jsname') === "M2UYVd" || buttonElement.getAttribute('jsname') === "OCpkoe") {
+           count++;
+        }        
     });
-    if (window.location.href.indexOf("formResponse") > -1 && isSubmissionPage === false) {
+    if (count === 0) {
         window.location.reload();
-    }  
+    }
 }
 
 // Fill all email and text fields
